@@ -1,1 +1,65 @@
-print("jiq hub")
+-- Made by jiqta
+
+
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Jiq Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "Jiqta"})
+
+-- tab 1
+
+local Tab = Window:MakeTab({
+	Name = "Script",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "best scripts"
+})
+
+Tab:AddButton({
+	Name = "Azure modded",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "da hood",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "da hood"
+})
+
+Tab:AddButton({
+	Name = "ZAPPED V3",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/grekkk/relases/main/zapped.lua'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "redacted",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/homohack.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "airhub",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "kirbesware anti lock",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/scripthubekitten/SCRIPTHUBV3/main/SCRIPTHUBV3", true))()
+  	end    
+})
