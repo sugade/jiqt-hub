@@ -12,9 +12,13 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local Section = Tab:AddSection({
+	Name = "Local player"
+})
+
 Tab:AddSlider({
 	Name = "Walk speed",
-	Min = 0,
+	Min = 16,
 	Max = 500,
 	Default = 5,
 	Color = Color3.fromRGB(255,255,255),
@@ -28,7 +32,7 @@ Tab:AddSlider({
 Tab:AddSlider({
 	Name = "Jump Power",
 	Min = 50,
-	Max = 300,
+	Max = 1000,
 	Default = 50,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
@@ -41,20 +45,24 @@ Tab:AddSlider({
 -- universal
 
 local Tab = Window:MakeTab({
-	Name = "universal",
+	Name = "Universal",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
+local Section = Tab:AddSection({
+	Name = "Universal"
+})
+
 Tab:AddButton({
-	Name = "inf yeild",
+	Name = "Inf Yeild",
 	Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
   	end    
 })
 
 Tab:AddButton({
-	Name = "orca",
+	Name = "Orca",
 	Callback = function()
         loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/snapshot.lua"))()
   	end    
@@ -62,7 +70,7 @@ Tab:AddButton({
 
 
 Tab:AddButton({
-	Name = "user creation",
+	Name = "User Creation",
 	Callback = function()
         loadstring(game:HttpGet'https://raw.githubusercontent.com/cracklua/cracks/m/UserCreation')'25ms owns you'
   	end    
@@ -71,14 +79,14 @@ Tab:AddButton({
 -- da hood
 
 local Tab = Window:MakeTab({
-	Name = "da hood",
+	Name = "Da Hood",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 
 local Section = Tab:AddSection({
-	Name = "da hood"
+	Name = "Da Hood"
 })
 
 Tab:AddButton({
@@ -104,14 +112,14 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "redacted",
+	Name = "Redacted",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/homohack.lua"))()
   	end    
 })
 
 Tab:AddButton({
-	Name = "airhub",
+	Name = "Airhub",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))()
   	end    
@@ -119,38 +127,46 @@ Tab:AddButton({
 
 -- counter blox
 local Tab = Window:MakeTab({
-	Name = "counter blox",
+	Name = "Counter Blox",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
+local Section = Tab:AddSection({
+	Name = "Counter Blox"
+})
+
 Tab:AddButton({
-	Name = "aimbot n shit",
+	Name = "Aimbot n shit",
 	Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main/scripts/CounterBlox.lua', true))()
   	end    
 })
 
 Tab:AddButton({
-	Name = "solaris",
+	Name = "Solaris",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/toasty-dev/pissblox/main/solaris_bootstrapper.lua",true))()
   	end    
 })
 
 Tab:AddButton({
-	Name = "esp and aimbot OP",
+	Name = "Esp and Aimbot OP",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/fliskScript/jaran.vip/main/free.lua"))()
   	end    
 })
 
 
--- blade ball 
+-- Blade ball 
+
 local Tab = Window:MakeTab({
 	Name = "blade ball",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Blade ball"
 })
 Tab:AddButton({
 	Name = "RedzHub",
@@ -170,25 +186,60 @@ Tab:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SoyAdriYT/PitbullHubX/refs/heads/main/PitbullHubX.lua", true))()
   	end    
 })
+Tab:AddButton({
+	Name = "Unknown Blade Ball Script",
+	Callback = function()
+        loadstring(game:HttpGet("https://pi-hub.pages.dev/scripts/loader.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Pi Hub ball auto farm",
+	Callback = function()
+        loadstring(game:HttpGet("https://pi-hub.pages.dev/scripts/loader.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Ball | BritishX",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/luascriptsROBLOX/BritishX/refs/heads/main/BladeBall"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Auto Spam Party (OP)",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/cyhysobad/cyhyhub/main/loader.lua"))()
+  	end    
+})
 -- rivals
 
 local Tab = Window:MakeTab({
-	Name = "rivals",
+	Name = "Rivals",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 
 local Section = Tab:AddSection({
-	Name = "rivals"
+	Name = "Rivals"
 })
 
 Tab:AddButton({
-	Name = "p3bt",
+	Name = "P3bt",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/riruru111/rivals/refs/heads/main/main.lua"))()
   	end    
 })
+
+Tab:AddButton({
+	Name = "Pi Hub",
+	Callback = function()
+        loadstring(game:HttpGet("https://pi-hub.pages.dev/scripts/loader.lua"))()
+  	end    
+})
+
 
 
 local Tab = Window:MakeTab({
@@ -206,6 +257,106 @@ Tab:AddButton({
 	Name = "KAT: Aimbot, Fov Circle, Esp",
 	Callback = function()
         
+  	end                                       
+})
+
+local Tab = Window:MakeTab({
+	Name = "Blox fruits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+
+local Section = Tab:AddSection({
+	Name = "Blox fruits"
+})
+
+Tab:AddButton({
+	Name = "Blox Fruits: Auto Stats, Buy Items & More",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/hungquan99/HungHub/main/Loading"))()
   	end    
 })
 
+Tab:AddButton({
+	Name = "theres a key system in this one",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/poolist/EzScript/main/Blfru"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Script good Script best Script....... (might be shit)",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/farghii/relzhub/main/execute.hack", true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "New script with OP Feature (key system)",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FreeeScripts/FREEHub/main/Loader", true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "(i think theres a key system idk) op script Auto Farm Level",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Miliudqq/Script/main/BaLL%20(3)"))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "(key system) Fruit Script Created By Blood",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Pa1nx/BloodBathScripts/main/BloxFruits"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "(might be key system idk) best script or smt apparently",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/hodrich/ChillX-/main/77_4KJUKCFG8U.lua'))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "(key system): Auto Attack, Auto Escape, Auto Lvl Up",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Godyulikkjos/goolisn0/main/obf_FSS0JwCZypaw47i2B2h8t2X8J3uFTB78U60BLKgzEoUo3rG37pFMBFrwx2R5WOWN.lua'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Chest auto farm",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NamelessScripts/chest-farm/main/Blox%20Fruits"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Bed Wars",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Bed Wars"
+})
+
+Tab:AddButton({
+	Name = "Vape V4",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Bed Wars [Killaura/All fall damage]",
+	Callback = function()
+        loadstring(game:HttpGet("https://gist.githubusercontent.com/DeveloperMikey/2b8ee3d5a38c56c2cc1db72554850384/raw/bedwar.lua", true))()
+  	end    
+})
