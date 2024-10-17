@@ -122,7 +122,7 @@ Tab:AddButton({
 -- blade ball 
 
 local Tab = Window:MakeTab({
-	Name = "counter blox",
+	Name = "blade ball",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
