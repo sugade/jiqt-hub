@@ -6,6 +6,37 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 
 local Window = OrionLib:MakeWindow({Name = "Jiq Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "Jiqta"})
 
+
+-- universal
+
+local Tab = Window:MakeTab({
+	Name = "universal",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "inf yeild",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "orca",
+	Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/snapshot.lua"))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "user creation",
+	Callback = function()
+        loadstring(game:HttpGet'https://raw.githubusercontent.com/cracklua/cracks/m/UserCreation')'25ms owns you'
+  	end    
+})
+
 -- good shit
 
 local Tab = Window:MakeTab({
@@ -86,34 +117,34 @@ Tab:AddButton({
 })
 
 
--- universal
+
+
+-- blade ball 
 
 local Tab = Window:MakeTab({
-	Name = "universal",
+	Name = "counter blox",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 Tab:AddButton({
-	Name = "inf yeild",
+	Name = "RedzHub",
 	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Hercules4328/BladeBalls/refs/heads/main/REDzHUB"))()
   	end    
 })
 
 Tab:AddButton({
-	Name = "orca",
+	Name = "astral",
 	Callback = function()
-        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/snapshot.lua"))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Augustzyzx/A-s-t-r-a-l/refs/heads/main/999X2sc.py.txt'))()
   	end    
 })
 
 
 Tab:AddButton({
-	Name = "user creation",
+	Name = "PitbullHub",
 	Callback = function()
-        loadstring(game:HttpGet'https://raw.githubusercontent.com/cracklua/cracks/m/UserCreation')'25ms owns you'
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SoyAdriYT/PitbullHubX/refs/heads/main/PitbullHubX.lua", true))()
   	end    
 })
-
-
