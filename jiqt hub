@@ -6,6 +6,20 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 
 local Window = OrionLib:MakeWindow({Name = "Jiq Hub (made by jiqta)", HidePremium = false, SaveConfig = true, ConfigFolder = "Jiqta"})
 
+OrionLib:MakeNotification({
+	Name = "Notification!",
+	Content = "Welcome to jiq hub! if some do not work i will update them.",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+--[[
+Title = <string> - The title of the notification.
+Content = <string> - The content of the notification.
+Image = <string> - The icon of the notification.
+Time = <number> - The duration of the notfication.
+]]
+
 local Tab = Window:MakeTab({
 	Name = "Local Player",
 	Icon = "rbxassetid://4483345998",
@@ -15,7 +29,6 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Local player"
 })
-
 Tab:AddSlider({
 	Name = "Walk speed",
 	Min = 16,
@@ -42,6 +55,13 @@ Tab:AddSlider({
 	end    
 })
 
+Tab:AddButton({
+	Name = "Fe Invisible Script",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/sugade/idkakslfnaoslf/refs/heads/main/README.md",true))()
+  	end    
+})
+
 -- universal
 
 local Tab = Window:MakeTab({
@@ -52,6 +72,12 @@ local Tab = Window:MakeTab({
 
 local Section = Tab:AddSection({
 	Name = "Universal"
+})
+Tab:AddButton({
+	Name = "CMD X (Admin)",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source"))()
+  	end    
 })
 
 Tab:AddButton({
@@ -93,6 +119,72 @@ Tab:AddButton({
 	Name = "ZAPPED V3",
 	Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/grekkk/relases/main/zapped.lua'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Da Hood | Another Aimlock",
+	Callback = function()
+        local Aiming = loadstring(game:HttpGet("https://pastebin.com/raw/wy4vTkmn"))()
+Aiming.TeamCheck(false)
+ 
+local Workspace = game:GetService("Workspace")
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+ 
+local LocalPlayer = Players.LocalPlayer
+local Mouse = LocalPlayer:GetMouse()
+local CurrentCamera = Workspace.CurrentCamera
+ 
+local DaHoodSettings = {
+    SilentAim = true,
+    AimLock = false,
+    Prediction = 0.138,
+    AimLockKeybind = Enum.KeyCode.P
+}
+getgenv().DaHoodSettings = DaHoodSettings
+ 
+function Aiming.Check()
+    if not (Aiming.Enabled == true and Aiming.Selected ~= LocalPlayer and Aiming.SelectedPart ~= nil) then
+        return false
+    end
+ 
+    local Character = Aiming.Character(Aiming.Selected)
+    local KOd = Character:WaitForChild("BodyEffects")["K.O"].Value
+    local Grabbed = Character:FindFirstChild("GRABBING_CONSTRAINT") ~= nil
+ 
+    if (KOd or Grabbed) then
+        return false
+    end
+ 
+    return true
+end
+ 
+local __index
+__index = hookmetamethod(game, "__index", function(t, k)
+    if (t:IsA("Mouse") and (k == "Hit" or k == "Target") and Aiming.Check()) then
+        local SelectedPart = Aiming.SelectedPart
+ 
+        if (DaHoodSettings.SilentAim and (k == "Hit" or k == "Target")) then
+            local Hit = SelectedPart.CFrame + (SelectedPart.Velocity * DaHoodSettings.Prediction)
+ 
+            return (k == "Hit" and Hit or SelectedPart)
+        end
+    end
+ 
+    return __index(t, k)
+end)
+ 
+RunService:BindToRenderStep("AimLock", 0, function()
+    if (DaHoodSettings.AimLock and Aiming.Check() and UserInputService:IsKeyDown(DaHoodSettings.AimLockKeybind)) then
+        local SelectedPart = Aiming.SelectedPart
+ 
+        local Hit = SelectedPart.CFrame + (SelectedPart.Velocity * DaHoodSettings.Prediction)
+ 
+        CurrentCamera.CFrame = CFrame.lookAt(CurrentCamera.CFrame.Position, Hit.Position)
+    end
+    end)
   	end    
 })
 
@@ -364,7 +456,142 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Aurora Hub",
 	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/cocotv666/Aurora/main/Aurora_Loader"))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/cocotv666/Aurora/refs/heads/main/Aurora_Loader'))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Prison Life",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Prison Life"
+})
+
+Tab:AddButton({
+	Name = "Prison Life Script 1 (unknown owner)",
+	Callback = function()
+        loadstring(game:HttpGet("https://zygomorphic-jobyna-impacthub-3d96c239.koyeb.app/main.lua"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "(OP) Fe Admin",
+	Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "(UPDATED!) Gui With Over 20 Features",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/GzeWWPWN"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Prison Life: Infinite ammo & more",
+	Callback = function()
+        loadstring(game:HttpGet"https://raw.githubusercontent.com/Unknownlodfc/Zephyr/refs/heads/main/Zephyr%20%7C%20Prison%20Life")() 
+  	end    
+})
+Tab:AddButton({
+	Name = "Prison Life: Jump hack, Give all guns, Kill player",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Prison Life: Inf Jump, Inf Stamina & More Mobile Script",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FreeeScripts/FREEHub/main/Loader", true))()
+  	end    
+})
+
+
+-- mm2 
+
+local Tab = Window:MakeTab({
+	Name = "Murder Mystery 2",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Murder Mystery 2 (cheater.fun scripts)"
+})
+
+Tab:AddButton({
+	Name = "Murder Mystery 2: Auto Shoot Murder, Coins Magnet",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/yarhm.lua", true))() 
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Vertex Script MM2",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vertex-peak/vertex/refs/heads/main/loadstring"))() 
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Murder Mystery 2 YARHM SCRIPT 2024",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/yarhm.lua", true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "MM2 Script Roblox",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/KidichiHB/Kidachi/main/Scripts/MM2", true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "NEXUS",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/s-0-a-b/nexus/main/loadstring"))()
+  	end    
+})
+
+-- mic up
+
+local Tab = Window:MakeTab({
+	Name = "Mic Up",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Mic Up"
+})
+
+Tab:AddButton({
+	Name = "Kitty hub",
+	Callback = function()
+        loadstring(game:HttpGet('https://whimper.xyz/kitty'))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Build A Boat for treasure",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Build A Boat for treasure"
+})
+
+Tab:AddButton({
+	Name = "Build A boat [auto farm and more]",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MrPectable/MrPectable/main/MrPectable.lua"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Build A Boat For Treasure: Builder Mobile Script",
+	Callback = function()
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/max2007killer/auto-build-not-limit/main/buildaboatv2obs.txt"),true))()
   	end    
 })
 
