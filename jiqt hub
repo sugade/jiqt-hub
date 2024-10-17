@@ -4,8 +4,39 @@
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Jiq Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "Jiqta"})
+local Window = OrionLib:MakeWindow({Name = "Jiq Hub (made by jiqta)", HidePremium = false, SaveConfig = true, ConfigFolder = "Jiqta"})
 
+local Tab = Window:MakeTab({
+	Name = "Local Player",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddSlider({
+	Name = "Walk speed",
+	Min = 0,
+	Max = 500,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Walk speed",
+	Callback = function(v) -- 500 (MaxValue) | 0 (MinValue)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+	end    
+})
+
+Tab:AddSlider({
+	Name = "Jump Power",
+	Min = 50,
+	Max = 300,
+	Default = 50,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Jump Power",
+	Callback = function(v) -- 500 (MaxValue) | 0 (MinValue)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+	end    
+})
 
 -- universal
 
@@ -37,25 +68,8 @@ Tab:AddButton({
   	end    
 })
 
--- good shit
-
-local Tab = Window:MakeTab({
-	Name = "Script",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local Section = Tab:AddSection({
-	Name = "best scripts"
-})
-
-Tab:AddButton({
-	Name = "Azure modded",
-	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
-  	end    
-})
 -- da hood
+
 local Tab = Window:MakeTab({
 	Name = "da hood",
 	Icon = "rbxassetid://4483345998",
@@ -75,6 +89,21 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+	Name = "Faded",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NighterEpic/Faded/main/YesEpic", true))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Azure Modded",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
+  	end    
+})
+
+Tab:AddButton({
 	Name = "redacted",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/homohack.lua"))()
@@ -87,32 +116,34 @@ Tab:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))()
   	end    
 })
+
 -- counter blox
 local Tab = Window:MakeTab({
 	Name = "counter blox",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+
 Tab:AddButton({
 	Name = "aimbot n shit",
 	Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main/scripts/CounterBlox.lua', true))()
   	end    
 })
+
 Tab:AddButton({
 	Name = "solaris",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/toasty-dev/pissblox/main/solaris_bootstrapper.lua",true))()
   	end    
 })
+
 Tab:AddButton({
 	Name = "esp and aimbot OP",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/fliskScript/jaran.vip/main/free.lua"))()
   	end    
 })
-
-
 
 
 -- blade ball 
@@ -139,3 +170,42 @@ Tab:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SoyAdriYT/PitbullHubX/refs/heads/main/PitbullHubX.lua", true))()
   	end    
 })
+-- rivals
+
+local Tab = Window:MakeTab({
+	Name = "rivals",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "rivals"
+})
+
+Tab:AddButton({
+	Name = "p3bt",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/riruru111/rivals/refs/heads/main/main.lua"))()
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "KAT",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "KAT"
+})
+
+Tab:AddButton({
+	Name = "KAT: Aimbot, Fov Circle, Esp",
+	Callback = function()
+        
+  	end    
+})
+
