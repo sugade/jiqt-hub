@@ -6,7 +6,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 
 local Window = OrionLib:MakeWindow({Name = "Jiq Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "Jiqta"})
 
--- tab 1
+-- good shit
 
 local Tab = Window:MakeTab({
 	Name = "Script",
@@ -24,7 +24,7 @@ Tab:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
   	end    
 })
-
+-- da hood
 local Tab = Window:MakeTab({
 	Name = "da hood",
 	Icon = "rbxassetid://4483345998",
@@ -56,7 +56,7 @@ Tab:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))()
   	end    
 })
-
+-- counter blox
 local Tab = Window:MakeTab({
 	Name = "counter blox",
 	Icon = "rbxassetid://4483345998",
@@ -84,3 +84,36 @@ Tab:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/fliskScript/jaran.vip/main/free.lua"))()
   	end    
 })
+
+
+-- universal
+
+local Tab = Window:MakeTab({
+	Name = "universal",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "inf yeild",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "orca",
+	Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/snapshot.lua"))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "user creation",
+	Callback = function()
+        loadstring(game:HttpGet'https://raw.githubusercontent.com/cracklua/cracks/m/UserCreation')'25ms owns you'
+  	end    
+})
+
+
