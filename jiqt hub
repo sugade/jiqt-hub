@@ -8,10 +8,13 @@ local Window = OrionLib:MakeWindow({Name = "Jiq Hub (made by jiqta)", HidePremiu
 
 OrionLib:MakeNotification({
 	Name = "Notification!",
-	Content = "Welcome to jiq hub! if some do not work i will update them.",
+	Content = "Welcome to jiq hub! if some do not work i will update them. NOTE: this is a new script hub and i am adding new scripts every day!",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
+
+setclipboard("https://discord.gg/usZVsbGe")
+toclipboard("https://discord.gg/usZVsbGe")
 
 --[[
 Title = <string> - The title of the notification.
@@ -79,6 +82,19 @@ Tab:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source"))()
   	end    
 })
+Tab:AddButton({
+	Name = "Domain X",
+	Callback = function()
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/drakker33/rblx-decaying-winter/main/DecayingWinter.lua"), true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Equinox",
+	Callback = function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/wzB1Qh78'),true))()
+  	end    
+})
 
 Tab:AddButton({
 	Name = "Inf Yeild",
@@ -101,6 +117,32 @@ Tab:AddButton({
         loadstring(game:HttpGet'https://raw.githubusercontent.com/cracklua/cracks/m/UserCreation')'25ms owns you'
   	end    
 })
+
+local Tab = Window:MakeTab({
+	Name = "FE Scripts",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "FE Scripts"
+})
+
+
+Tab:AddButton({
+	Name = "(R6) ZOMBIE",
+	Callback = function()
+        loadstring(game:HttpGet("https://gist.githubusercontent.com/someunknowndude/18f1d979ad9a25ad69064be75f55f735/raw/dc36f1e9ad906a7434bd77bcd0ce8218fb5f4d88/zombie.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "(R6)FE car script",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/MonkoTubeYT/carscript/master/!carscript.lua',true))()
+  	end    
+})
+
 
 -- da hood
 
@@ -332,6 +374,19 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "BEST script August 2024 (apparently)",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/XorV2/script/main/Unfair'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "N/A",
+	Callback = function()
+        loadstring(game:HttpGet("https://pi-hub.pages.dev/scripts/loader.lua"))()
+  	end    
+})
 
 
 local Tab = Window:MakeTab({
@@ -592,6 +647,30 @@ Tab:AddButton({
 	Name = "Build A Boat For Treasure: Builder Mobile Script",
 	Callback = function()
         loadstring(game:HttpGet(("https://raw.githubusercontent.com/max2007killer/auto-build-not-limit/main/buildaboatv2obs.txt"),true))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Natural Disaster Survival",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Natural Disaster Survival"
+})
+
+Tab:AddButton({
+	Name = "Auto-Farm (No Key System)",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/pcallskeleton/RX/refs/heads/main/5.lua'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "WTF hub",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/HSp4m/rbx-scr.wtf/main/loader.brainfuck", true))()
   	end    
 })
 
