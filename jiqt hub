@@ -57,9 +57,30 @@ Tab:AddButton({
   	end    
 })
 
+local Tab = Window:MakeTab({
+	Name = "counter blox",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
 Tab:AddButton({
-	Name = "kirbesware anti lock",
+	Name = "aimbot n shit",
 	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/scripthubekitten/SCRIPTHUBV3/main/SCRIPTHUBV3", true))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main/scripts/CounterBlox.lua', true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "solaris",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/toasty-dev/pissblox/main/solaris_bootstrapper.lua",true))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "esp and aimbot OP",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/fliskScript/jaran.vip/main/free.lua"))()
   	end    
 })
