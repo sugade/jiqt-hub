@@ -674,3 +674,21 @@ Tab:AddButton({
   	end    
 })
 
+
+
+local Tab = Window:MakeTab({
+	Name = "BrookHaven",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "BrookHaven"
+})
+
+Tab:AddButton({
+	Name = "cheater.fun random script",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Trev0rZ/LoaderM/refs/heads/main/ImperiaHub-lWorking.lua'))()
+  	end    
+})
